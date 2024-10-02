@@ -1,0 +1,26 @@
+{% include 'base.html' %}
+{% include 'header.html' %}
+
+<body class="flex justify-center content-center flex-col">
+    
+ 
+<section class="flex justify-center content-center w-full">
+    <div id="calendar" class="w-1/2"></div>
+</section>
+
+<script>
+
+    const options= {
+            settings: {
+                lang: 'pt-BR', 
+                iso8601: false,
+            },
+        };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const calendar = new VanillaCalendar('#calendar', options);''
+        calendar.init();
+    });
+</script>
+
+</body>
